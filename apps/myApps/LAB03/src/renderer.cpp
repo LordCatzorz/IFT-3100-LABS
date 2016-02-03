@@ -7,6 +7,7 @@ void Renderer::setup()
 {
 	i = 0;
 	grassBlock = GrassBlock();
+	googleMusicLogo = GoogleMusicLogo();
 }
 
 void Renderer::draw()
@@ -15,8 +16,9 @@ void Renderer::draw()
 	ofSetBackgroundColor(0, 255, 0);
 	ofPushMatrix();
 	ofTranslate(ofGetWindowWidth() / 2.0, ofGetWindowHeight() / 2.0);
-
-	grassBlock.draw();
+	
+	//grassBlock.draw();
+	googleMusicLogo.draw();
 	ofPopMatrix();
 }
 
