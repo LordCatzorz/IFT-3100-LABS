@@ -14,6 +14,7 @@ private:
 	Face faceRight;
 
 	void createLeft();
+	void createRight();
 	int i;
 
 
