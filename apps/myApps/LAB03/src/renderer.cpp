@@ -17,8 +17,11 @@ void Renderer::draw()
 	ofPushMatrix();
 	ofTranslate(ofGetWindowWidth() / 2.0, ofGetWindowHeight() / 2.0);
 	
-	//grassBlock.draw();
 	googleMusicLogo.draw();
+	ofPushMatrix();
+	ofTranslate(0, -60);
+	grassBlock.draw();
+	ofPopMatrix();
 	ofPopMatrix();
 }
 

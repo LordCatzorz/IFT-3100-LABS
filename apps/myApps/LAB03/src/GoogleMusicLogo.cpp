@@ -12,12 +12,15 @@ GoogleMusicLogo::~GoogleMusicLogo()
 void GoogleMusicLogo::draw()
 {
 	ofColor orange = ofColor::fromHex(0xed720d);
+	ofColor brightOrange = ofColor::fromHex(0xf5810e);
+	ofColor darkOrange = ofColor::fromHex(0xaf5409);
 	ofColor beige = ofColor::fromHex(0xfdbb5c);
 	ofColor erase = ofGetBackgroundColor();
 
 	ofFill();
 	ofSetCircleResolution(100);
 
+	//Arc
 	ofSetColor(orange);
 	ofDrawCircle(0, 0, 222.5);
 
@@ -28,12 +31,20 @@ void GoogleMusicLogo::draw()
 	ofDrawCircle(0, 0, 142.5);
 	ofDrawRectangle(-193.5, 7, 387, 300);
 
+	//Arms
 	ofSetColor(orange);
 	ofDrawTriangle(-222, 20, -194, 20, -194, 144);
 	ofDrawTriangle(-166, 144, -194, 20, -194, 144);
 
 	ofDrawTriangle(222, 20, 194, 20, 194, 144);
 	ofDrawTriangle(166, 144, 194, 20, 194, 144);
+
+	ofSetColor(darkOrange);
+	ofDrawTriangle(166, 144, 194, 144, 185, 62);
+	ofDrawTriangle(194, 144, 185, 62, 206, 92);
+
+
+	//Ear cover
 
 	//ofSetColor(0, 128, 0);
 
@@ -56,12 +67,12 @@ void GoogleMusicLogo::draw()
 	ofDrawTriangle(getPointAtAngle(topRight, 0), getPointAtAngle(bottomRight, 0), getPointAtAngle(topLeft, 180));
 
 
-	ofSetColor(orange);
+	ofSetColor(brightOrange);
 	drawCircle(bottomLeft); 
 	drawCircle(topLeft); 
 
-	ofDrawTriangle(getPointAtAngle(topLeft, 90), ofPoint(-133, 34), ofPoint(-94, 220));
-	ofDrawTriangle(getPointAtAngle(topLeft, 90), getPointAtAngle(bottomLeft,270), ofPoint(-94, 220));
+	ofDrawTriangle(getPointAtAngle(topLeft, 90), ofPoint(-133, 32.5), ofPoint(-100, 220));
+	ofDrawTriangle(getPointAtAngle(topLeft, 90), getPointAtAngle(bottomLeft,270), ofPoint(-100, 220));
 	ofDrawTriangle(getPointAtAngle(topLeft, 180), getPointAtAngle(bottomLeft, 180), getPointAtAngle(bottomLeft, 0));
 	ofDrawTriangle(getPointAtAngle(topLeft, 180), getPointAtAngle(bottomLeft, 180), getPointAtAngle(topLeft, 0));
 
@@ -86,12 +97,12 @@ void GoogleMusicLogo::draw()
 	ofDrawTriangle(getPointAtAngle(topRight, 180), getPointAtAngle(bottomRight, 180), getPointAtAngle(topLeft, 0));
 
 
-	ofSetColor(orange);
+	ofSetColor(brightOrange);
 	drawCircle(bottomLeft);
 	drawCircle(topLeft);
 
-	ofDrawTriangle(getPointAtAngle(topLeft, 90), ofPoint(133, 34), ofPoint(94, 220));
-	ofDrawTriangle(getPointAtAngle(topLeft, 90), getPointAtAngle(bottomLeft, 270), ofPoint(94, 220));
+	ofDrawTriangle(getPointAtAngle(topLeft, 90), ofPoint(133, 32.5), ofPoint(100, 220));
+	ofDrawTriangle(getPointAtAngle(topLeft, 90), getPointAtAngle(bottomLeft, 270), ofPoint(100, 220));
 	ofDrawTriangle(getPointAtAngle(topLeft, 0), getPointAtAngle(bottomLeft, 0), getPointAtAngle(bottomLeft, 180));
 	ofDrawTriangle(getPointAtAngle(topLeft, 0), getPointAtAngle(bottomLeft, 0), getPointAtAngle(topLeft, 180));
 
