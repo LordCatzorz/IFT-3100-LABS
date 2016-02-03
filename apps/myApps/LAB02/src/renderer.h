@@ -20,7 +20,7 @@ class Renderer
 public:
 	std::vector<ofImage*> imageAlbums;
 
-	Renderer();
+	Renderer(std::string _user);
 
 	void setup();
 	void draw();
@@ -32,10 +32,11 @@ public:
 private:
 	std::list<std::pair<std::string, std::string>> topAlbums;
 	std::string extractStringBetween(std::string*& searchedString, std::string searchedA, std::string searchedB);
-	void getLastFMContent();
+	void getLastFMContent(utility::string_t _user);
 
 	float offsetVerticalImagePercentage;
 	float offsetHorizontalImagePercentage;
 	float imageOriginalSize = 300;
 	int imageCount = 19;
+	utility::string_t user;
 };

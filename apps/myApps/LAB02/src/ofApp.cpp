@@ -10,7 +10,7 @@ void ofApp::setup()
 	ofLog() << "<ofApp::setup>";
 
 	ofSetWindowTitle("Lab02 - Albums");
-	this->renderer = new Renderer();
+	this->renderer = new Renderer("LordCatzorz");
 	renderer->setup();
 }
 

@@ -1,8 +1,9 @@
 #include "renderer.h"
 
-Renderer::Renderer()
+Renderer::Renderer(std::string _user)
 {
 	imageAlbums.resize(imageCount);
+	this->user = utility::conversions::to_string_t(_user);
 }
 
 void Renderer::setup()
@@ -11,7 +12,7 @@ void Renderer::setup()
 	offsetHorizontalImagePercentage = 0.1;
 	offsetVerticalImagePercentage = 0.1;
 
-	getLastFMContent();
+	getLastFMContent(this->user);
 	std::list<std::string> artistDone;
 	int i = 0;
 	for (std::list<std::pair<std::string, std::string>>::iterator it = this->topAlbums.begin(); it != this->topAlbums.end() && i < this->imageCount; it++)
@@ -30,7 +31,7 @@ void Renderer::setup()
 void Renderer::draw()
 {
 	ofClear(ofColor(80));
-	
+
 	float offset = offsetHorizontalImagePercentage*imageOriginalSize*0.25;
 
 	float bigImageWidth = imageOriginalSize - offset;
@@ -57,7 +58,7 @@ void Renderer::draw()
 	rows[4] = rows[3] + tinyImageHeight + offset;
 	rows[5] = rows[4] + tinyImageHeight + offset;
 	rows[6] = rows[5] + tinyImageHeight + offset;
-	
+
 	//resize windows to fit
 	ofSetWindowShape(columns[6] + tinyImageWidth + offset, rows[6] + tinyImageHeight + offset);
 
@@ -134,13 +135,13 @@ extractStringBetween(std::string *& searchedString, std::string searchedA, std::
 	return searchedString->substr(0, flagB);
 }
 
-void Renderer::getLastFMContent()
+void Renderer::getLastFMContent(utility::string_t _user)
 {
 	http_client client(U("https://ws.audioscrobbler.com/2.0/"));
 	// Build request URI and start the request.
 	uri_builder builder(U("/"));
 	builder.append_query(U("method"), U("user.gettopalbums"));
-	builder.append_query(U("user"), U("LordCatzorz"));
+	builder.append_query(U("user"), _user);
 	builder.append_query(U("api_key"), U("09a22381ce7a9913af88204c5c12bf04"));
 	std::wstring s = client.request(methods::GET, builder.to_string()).get().extract_string().get();
 
