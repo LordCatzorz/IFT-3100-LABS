@@ -1,7 +1,7 @@
 #pragma once
 #include "ofMain.h"
 #include <string>
-#include "Logo.h"
+#include "GrassBlock.h"
 using namespace std;
 class Renderer
 {
@@ -16,6 +16,6 @@ public:
 	void imageImport(const string URL, ofImage * & imageDestination);
 	void exportImage(const string name, const string extension);
 private:
-	Logo logo;
+	GrassBlock grassBlock;
 	int i;
 };

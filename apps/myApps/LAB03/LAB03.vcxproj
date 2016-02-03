@@ -171,7 +171,7 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Logo.cpp" />
+    <ClCompile Include="src\GrassBlock.cpp" />
     <ClCompile Include="src\Face.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
@@ -184,7 +184,7 @@
     <ClCompile Include="src\renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Logo.h" />
+    <ClInclude Include="src\GrassBlock.h" />
     <ClInclude Include="src\Face.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxSvg\src\ofxSvg.h" />

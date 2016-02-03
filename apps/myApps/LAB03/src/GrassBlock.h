@@ -1,10 +1,10 @@
 #pragma once
 #include "Face.h"
-class Logo
+class GrassBlock
 {
 public:
-	Logo();
-	~Logo();
+	GrassBlock();
+	~GrassBlock();
 
 	void draw();
 

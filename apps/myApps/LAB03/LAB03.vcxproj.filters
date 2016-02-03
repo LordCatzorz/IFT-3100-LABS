@@ -25,13 +25,13 @@
     <ClCompile Include="src\renderer.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Logo.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\Pixel.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\Face.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GrassBlock.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,13 +74,13 @@
     <ClInclude Include="src\renderer.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Logo.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\Pixel.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\Face.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GrassBlock.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

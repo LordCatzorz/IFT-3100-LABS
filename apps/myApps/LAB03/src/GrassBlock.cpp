@@ -1,6 +1,6 @@
-#include "Logo.h"
+#include "GrassBlock.h"
 
-Logo::Logo()
+GrassBlock::GrassBlock()
 {
 
 	createTop();
@@ -18,13 +18,13 @@ Logo::Logo()
 	i = 0;
 }
 
-Logo::~Logo()
+GrassBlock::~GrassBlock()
 {
 }
 
-void Logo::draw()
+void GrassBlock::draw()
 {
-
+	
 	ofPushMatrix();
 	ofRotate(45, 0, 1, 0);
 	ofRotate(-25, 1, 0, 1);
@@ -40,7 +40,7 @@ void Logo::draw()
 	ofPopMatrix();
 }
 
-void Logo::createLeft()
+void GrassBlock::createLeft()
 {
 	faceLeft = Face();
 
@@ -320,7 +320,7 @@ void Logo::createLeft()
 
 }
 
-void Logo::createRight()
+void GrassBlock::createRight()
 {
 	faceRight = Face();
 
@@ -597,7 +597,7 @@ void Logo::createRight()
 	faceRight.facePixel[0][15].colour = _5b422d;
 }
 
-void Logo::createTop()
+void GrassBlock::createTop()
 {
 	faceTop = Face();
 

@@ -6,7 +6,7 @@ Renderer::Renderer()
 void Renderer::setup()
 {
 	i = 0;
-	logo = Logo();
+	grassBlock = GrassBlock();
 }
 
 void Renderer::draw()
@@ -14,8 +14,9 @@ void Renderer::draw()
 
 	ofSetBackgroundColor(0, 255, 0);
 	ofPushMatrix();
-	ofTranslate(ofGetWindowWidth()/2.0, ofGetWindowHeight()/2.0);
-	logo.draw();
+	ofTranslate(ofGetWindowWidth() / 2.0, ofGetWindowHeight() / 2.0);
+
+	grassBlock.draw();
 	ofPopMatrix();
 }
 
