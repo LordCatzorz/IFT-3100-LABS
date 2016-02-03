@@ -15,6 +15,7 @@ private:
 
 	void createLeft();
 	void createRight();
+	void createTop();
 	int i;
 
 
