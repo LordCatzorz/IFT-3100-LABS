@@ -12,7 +12,6 @@ public:
 	void setup();
 	void draw();
 
-
 	~Renderer();
 	void imageImport(const string URL, ofImage * & imageDestination);
 	void exportImage(const string name, const string extension);

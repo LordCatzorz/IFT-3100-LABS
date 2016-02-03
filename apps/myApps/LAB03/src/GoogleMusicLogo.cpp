@@ -31,6 +31,15 @@ void GoogleMusicLogo::draw()
 	ofDrawCircle(0, 0, 142.5);
 	ofDrawRectangle(-193.5, 7, 387, 300);
 
+	//round the middle arc
+	ofSetColor(erase);
+	ofDrawRectangle(-155.5, -6, 26, 13);
+	ofDrawRectangle(155.5, -6, -26, 13);
+	ofSetColor(beige);
+	ofDrawCircle(-155.5, -6, 13);
+	ofDrawCircle(155.5, -6, 13);
+
+
 	//Arms
 	ofSetColor(orange);
 	ofDrawTriangle(-222, 20, -194, 20, -194, 144);
