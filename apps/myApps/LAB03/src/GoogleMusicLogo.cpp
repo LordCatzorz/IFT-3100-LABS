@@ -79,8 +79,8 @@ void GoogleMusicLogo::draw()
 	ofSetColor(brightOrange);
 	drawCircle(bottomLeft); 
 	drawCircle(topLeft); 
-
 	ofDrawTriangle(getPointAtAngle(topLeft, 90), ofPoint(-133, 32.5), ofPoint(-100, 220));
+	
 	ofDrawTriangle(getPointAtAngle(topLeft, 90), getPointAtAngle(bottomLeft,270), ofPoint(-100, 220));
 	ofDrawTriangle(getPointAtAngle(topLeft, 180), getPointAtAngle(bottomLeft, 180), getPointAtAngle(bottomLeft, 0));
 	ofDrawTriangle(getPointAtAngle(topLeft, 180), getPointAtAngle(bottomLeft, 180), getPointAtAngle(topLeft, 0));
